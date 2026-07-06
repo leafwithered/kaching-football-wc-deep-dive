@@ -1,6 +1,6 @@
 # X Thread Draft
 
-1/
+## Tweet 1
 
 Kaching's Football WC campaign is interesting because it does not start with abstract crypto jargon.
 
@@ -10,7 +10,7 @@ buy a ticket -> wait for the draw -> check the result -> verify it on-chain.
 
 That is a clean Solana consumer app wedge.
 
-2/
+## Tweet 2
 
 Kaching positions itself as an on-chain lottery on Solana where draws are provably fair and verifiable.
 
@@ -18,7 +18,7 @@ The WC 2026 wrapper gives the product something most crypto apps struggle to cre
 
 recurring mainstream attention.
 
-3/
+## Tweet 3
 
 The best part of this campaign is the simplicity.
 
@@ -28,13 +28,13 @@ They can understand:
 
 ticket, draw, winning numbers, result, proof.
 
-4/
+## Tweet 4
 
 Solana fits this use case because lottery-style apps need frequent, low-friction interactions.
 
 Fast transactions, low fees, public verification, wallet-native rewards, referrals, and leaderboards all matter here.
 
-5/
+## Tweet 5
 
 The blockchain layer is not just decoration.
 
@@ -44,7 +44,7 @@ the draw should not feel like a black-box web2 raffle.
 
 Users should be able to inspect the outcome and see why the result is credible.
 
-6/
+## Tweet 6
 
 The product page already points toward a repeatable loop:
 
@@ -58,7 +58,7 @@ The product page already points toward a repeatable loop:
 
 That is a good foundation for a campaign-driven consumer app.
 
-7/
+## Tweet 7
 
 The biggest UX opportunity:
 
@@ -68,7 +68,7 @@ The result page should answer:
 
 what happened, did I win, where is the proof, what is next?
 
-8/
+## Tweet 8
 
 Kaching's growth loops can be simple:
 
@@ -78,7 +78,7 @@ Kaching's growth loops can be simple:
 - winners and near-misses become social content
 - on-chain proof gives the campaign credibility
 
-9/
+## Tweet 9
 
 The WC campaign angle is smart because football creates natural moments:
 
@@ -86,7 +86,7 @@ countdowns, match days, draw reveals, leaderboard movement, reward pools, and so
 
 Each draw can become a story, not just a transaction.
 
-10/
+## Tweet 10
 
 The main risk is messaging.
 
@@ -96,7 +96,7 @@ The stronger framing is:
 
 a Solana-native verifiable draw experience around a global sports moment.
 
-11/
+## Tweet 11
 
 My take:
 
@@ -107,7 +107,7 @@ Make the result clear.
 Keep the proof one click away.
 Use Solana as the trust layer underneath.
 
-12/
+## Tweet 12
 
 If Kaching nails the WC campaign UX, it can become more than a lottery page.
 
