@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaching Football WC Campaign Deep Dive</title>
+    <meta
+      name="description"
+      content="A deep dive on Kaching's Football WC campaign, Solana-native verifiable draws, consumer UX, and growth loops."
+    />
+    <style>
+      :root {
+        --ink: #15171a;
+        --muted: #5b6472;
+        --line: #d9dee7;
+        --paper: #fbfbf8;
+        --panel: #ffffff;
+        --green: #1d8b5f;
+        --blue: #225f91;
+        --gold: #c18b22;
+        --red: #b84a3d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.62;
+      }
+
+      a {
+        color: var(--blue);
+      }
+
+      .shell {
+        width: min(1080px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(135deg, rgba(29, 139, 95, 0.18), transparent 36%),
+          linear-gradient(315deg, rgba(193, 139, 34, 0.18), transparent 32%),
+          var(--paper);
+      }
+
+      .hero {
+        min-height: 86vh;
+        display: grid;
+        align-content: center;
+        gap: 28px;
+        padding: 68px 0 54px;
+      }
+
+      .eyebrow {
+        color: var(--green);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 0.82rem;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 930px;
+        margin: 0;
+        font-size: clamp(2.4rem, 6vw, 5.5rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 780px;
+        color: #29313c;
+        font-size: clamp(1.05rem, 2vw, 1.36rem);
+        margin: 0;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.7);
+        padding: 14px;
+      }
+
+      .metric b {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      main {
+        padding: 48px 0 70px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 42px;
+        align-items: start;
+      }
+
+      article {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: clamp(22px, 4vw, 52px);
+      }
+
+      article h2 {
+        margin: 46px 0 12px;
+        font-size: clamp(1.5rem, 3vw, 2.05rem);
+        line-height: 1.12;
+        letter-spacing: 0;
+      }
+
+      article h2:first-child {
+        margin-top: 0;
+      }
+
+      article p {
+        margin: 0 0 18px;
+      }
+
+      article ul,
+      article ol {
+        margin: 0 0 24px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 7px 0;
+      }
+
+      aside {
+        position: sticky;
+        top: 18px;
+      }
+
+      .side-block {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        padding: 18px;
+        margin-bottom: 14px;
+      }
+
+      .side-block h3 {
+        margin: 0 0 10px;
+        font-size: 0.98rem;
+      }
+
+      .side-block p {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin: 0 0 8px;
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        margin: 28px 0;
+      }
+
+      .step {
+        min-height: 96px;
+        border: 1px solid var(--line);
+        padding: 12px;
+        background: #f7faf8;
+      }
+
+      .step b {
+        display: block;
+        color: var(--green);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+      }
+
+      .step span {
+        display: block;
+        margin-top: 8px;
+        font-weight: 700;
+      }
+
+      .scorecard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 22px 0;
+      }
+
+      .score {
+        border-left: 4px solid var(--gold);
+        background: #fff8e7;
+        padding: 14px 16px;
+      }
+
+      .score b {
+        display: block;
+      }
+
+      .notice {
+        border: 1px solid rgba(184, 74, 61, 0.35);
+        background: #fff4f2;
+        padding: 16px 18px;
+        color: #5a201b;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 44px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 860px) {
+        .hero-grid,
+        .layout,
+        .flow,
+        .scorecard {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell hero">
+        <div>
+          <div class="eyebrow">Kaching Football WC Campaign Deep Dive</div>
+          <h1>Why on-chain lottery UX could become a Solana consumer app moment</h1>
+        </div>
+        <p class="lead">
+          Kaching combines a familiar sports campaign loop with Solana-native verification: buy a ticket,
+          wait for the draw, check the result, and inspect the on-chain proof.
+        </p>
+        <div class="hero-grid">
+          <div class="metric"><b>Consumer Hook</b><span>Ticket, draw, result, proof</span></div>
+          <div class="metric"><b>Trust Layer</b><span>Verifiable on-chain draw flow</span></div>
+          <div class="metric"><b>Growth Loop</b><span>Referrals, leaderboard, repeat draws</span></div>
+          <div class="metric"><b>Campaign Wrapper</b><span>Football WC attention cycle</span></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <div class="layout">
+        <article>
+          <h2>Thesis</h2>
+          <p>
+            Kaching is building a simple but powerful idea: an on-chain lottery experience on Solana where
+            draws are designed to be publicly verifiable. Its Football WC campaign gives that idea a mainstream
+            wrapper: sports attention, recurring draws, tickets, leaderboards, and a clear reason for users to
+            come back.
+          </p>
+          <p>
+            My thesis: Kaching's strongest opportunity is not just "lottery on Solana." It is turning a
+            familiar global sports habit into a repeatable consumer loop where users can participate quickly,
+            check outcomes clearly, and understand why on-chain verification matters.
+          </p>
+
+          <div class="flow" aria-label="Kaching user loop">
+            <div class="step"><b>1</b><span>Buy Ticket</span></div>
+            <div class="step"><b>2</b><span>Wait For Draw</span></div>
+            <div class="step"><b>3</b><span>Check Result</span></div>
+            <div class="step"><b>4</b><span>View Proof</span></div>
+            <div class="step"><b>5</b><span>Return / Refer</span></div>
+          </div>
+
+          <h2>The Core Consumer Hook</h2>
+          <p>
+            Most users do not wake up wanting on-chain randomness or verifiable settlement. They want a game
+            they can understand in seconds. Kaching's WC 2026 campaign has that shape: pick or buy into a draw,
+            wait for the result, check winning numbers, inspect proof, and track tickets, referrals, and
+            leaderboard position.
+          </p>
+          <p>
+            The product page already points toward this loop with "Next Draw," "Buy a Ticket," "View Results,"
+            "View OnChain," "My Tickets Dashboard," and "Leaderboard." These are not abstract DeFi actions.
+            They are consumer actions.
+          </p>
+
+          <h2>Why Solana Fits</h2>
+          <p>
+            Lottery and draw products need frequent interaction. If a user has to pay high fees, wait too long,
+            or fight clunky wallet UX, the experience collapses. Solana is a natural fit because the consumer
+            promise is fast interaction, low fees, public verification, and wallet-native rewards.
+          </p>
+
+          <h2>The Trust Layer</h2>
+          <p>
+            Traditional online raffles and lotteries ask users to trust the operator. Kaching's positioning is
+            different: every draw is presented as provably fair and verifiable.
+          </p>
+          <p>
+            The key is not to turn every user into a block explorer expert. The key is to make the system feel
+            transparent enough that the user understands the difference between a normal web raffle and an
+            on-chain draw.
+          </p>
+
+          <div class="scorecard">
+            <div class="score"><b>Simple layer</b>Winning numbers, ticket status, reward pool, next draw.</div>
+            <div class="score"><b>Proof layer</b>On-chain result link, draw metadata, plain-English explanation.</div>
+          </div>
+
+          <h2>UX Opportunities</h2>
+          <ul>
+            <li>A clearer first-time flow: buy ticket, wait for draw, verify result.</li>
+            <li>A match-day campaign calendar.</li>
+            <li>Draw cards with pot size, time left, ticket status, and proof status.</li>
+            <li>A result page that separates winning numbers from on-chain verification.</li>
+            <li>Referral prompts tied to campaign moments, not generic sharing.</li>
+            <li>Leaderboard sections for all-time, weekly, and campaign-specific ranks.</li>
+            <li>Short explainer copy for new users: why on-chain draws are different.</li>
+          </ul>
+
+          <h2>Campaign Content Plan</h2>
+          <p>Kaching can turn every draw into a repeatable content object:</p>
+          <ul>
+            <li>Pre-draw: next pool is live, here is the deadline.</li>
+            <li>Countdown: X hours left before the draw.</li>
+            <li>Result: winning numbers are out.</li>
+            <li>Proof: here is the on-chain result.</li>
+            <li>Social: leaderboard moved, next draw is open.</li>
+          </ul>
+
+          <h2>Metrics That Matter</h2>
+          <ul>
+            <li>Visitor to ticket purchase conversion.</li>
+            <li>Ticket buyer to result checker conversion.</li>
+            <li>Result checker to next-draw return rate.</li>
+            <li>Referral share rate before each draw.</li>
+            <li>Percentage of result viewers who click "View OnChain."</li>
+            <li>Leaderboard repeat visits.</li>
+          </ul>
+
+          <h2>Risks To Handle Carefully</h2>
+          <div class="notice">
+            Kaching should avoid language that implies guaranteed profit, guaranteed winning, or official sports
+            affiliation unless explicitly true. Lottery-style products can vary by jurisdiction, so user-facing
+            copy should keep participation terms and local restrictions clear.
+          </div>
+
+          <h2>Final Take</h2>
+          <p>
+            Kaching's Football WC campaign has a strong foundation because it combines a familiar consumer
+            behavior with a crypto-native trust layer. The campaign should win by making three things effortless:
+            joining a draw, understanding the result, and verifying the outcome.
+          </p>
+          <p>
+            If Kaching keeps the UX simple and the proof visible, the campaign can become more than a lottery
+            page. It can become a repeatable Solana consumer growth loop built around sports attention,
+            transparent draws, and social sharing.
+          </p>
+        </article>
+
+        <aside>
+          <div class="side-block">
+            <h3>Source Links</h3>
+            <p><a href="https://superteam.fun/earn/listing/deep-dive-on-kaching-football-wc-campaign">Superteam listing</a></p>
+            <p><a href="https://superteam.fun/earn/s/kachingvip">Kaching sponsor page</a></p>
+            <p><a href="https://kaching.vip/">Kaching product page</a></p>
+          </div>
+          <div class="side-block">
+            <h3>Positioning</h3>
+            <p>On-chain lottery experience, verifiable draw flow, Solana-native consumer app, World Cup-themed campaign.</p>
+          </div>
+          <div class="side-block">
+            <h3>Boundaries</h3>
+            <p>No guaranteed-profit claims. No official sports-affiliation claim. No smart-contract audit claim.</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="shell">
+        Prepared as a content submission package for the Kaching Football WC Campaign deep dive bounty.
+      </div>
+    </footer>
+  </body>
+</html>
