@@ -24,7 +24,7 @@ Fastest option:
 
 Paste from `SUBMISSION_TEXT.md`, then replace:
 
-- `PASTE_ARTICLE_LINK_HERE`
+- `https://leafwithered.github.io/kaching-football-wc-deep-dive/`
 - `PASTE_X_THREAD_LINK_HERE`
 
 ## Final Checklist
@@ -36,4 +36,3 @@ Paste from `SUBMISSION_TEXT.md`, then replace:
 - No claim of official FIFA affiliation
 - No claim that smart contracts were audited
 - Uses Kaching source links and Superteam listing link
-

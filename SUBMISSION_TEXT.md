@@ -12,7 +12,7 @@ The piece explains the core user loop, why Solana fits frequent verifiable draws
 
 Long-form article:
 
-PASTE_ARTICLE_LINK_HERE
+https://leafwithered.github.io/kaching-football-wc-deep-dive/
 
 X thread:
 
@@ -25,4 +25,3 @@ https://superteam.fun/earn/listing/deep-dive-on-kaching-football-wc-campaign
 https://superteam.fun/earn/s/kachingvip
 
 https://kaching.vip/
-
