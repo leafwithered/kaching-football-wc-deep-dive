@@ -115,6 +115,10 @@
         align-items: start;
       }
 
+      .layout > * {
+        min-width: 0;
+      }
+
       article {
         background: var(--panel);
         border: 1px solid var(--line);
@@ -224,9 +228,11 @@
 
       .product-table {
         width: 100%;
+        max-width: 100%;
         border-collapse: collapse;
         margin: 24px 0;
         font-size: 0.94rem;
+        table-layout: fixed;
       }
 
       .product-table th,
@@ -235,6 +241,7 @@
         padding: 11px 12px;
         vertical-align: top;
         text-align: left;
+        overflow-wrap: anywhere;
       }
 
       .product-table th {
@@ -273,8 +280,34 @@
 
         .product-table {
           display: block;
-          overflow-x: auto;
-          white-space: nowrap;
+          overflow: visible;
+          white-space: normal;
+        }
+
+        .product-table thead {
+          display: none;
+        }
+
+        .product-table tbody,
+        .product-table tr,
+        .product-table td {
+          display: block;
+          width: 100%;
+        }
+
+        .product-table tr {
+          border: 1px solid var(--line);
+          margin: 0 0 12px;
+          background: #fff;
+        }
+
+        .product-table td {
+          border: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .product-table td:last-child {
+          border-bottom: 0;
         }
 
         aside {
