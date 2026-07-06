@@ -12,15 +12,9 @@ Product:
 
 https://kaching.vip/
 
-## Why This Bounty
+## Overview
 
-This is a better near-term target than the Echoes Fans front-end project:
-
-- 1,000 USDC total prize pool
-- 500 / 300 / 200 USDC for top three
-- About 10 submissions when reviewed
-- Content-focused and can be shipped quickly
-- Product has a clear hook: on-chain lottery, Solana, WC 2026 campaign, verifiable draws
+This repository contains my public submission package for the Kaching Football WC Campaign deep dive bounty: long-form article, X thread, source notes, public article page, and submission text.
 
 ## Deliverables In This Folder
 
@@ -34,23 +28,19 @@ This is a better near-term target than the Echoes Fans front-end project:
 
 ## Public Article
 
-Once this repo is pushed to GitHub Pages, the article should be available at:
+The public article is available at:
 
 ```text
 https://leafwithered.github.io/kaching-football-wc-deep-dive/
 ```
 
-If the repository name is changed, update the URL accordingly.
-
 ## Recommended Submission
 
-Best path:
+Submitted materials:
 
-1. Post the X thread from `X_THREAD.md`.
-2. Optionally publish the long-form article on Notion/Substack/Mirror.
-3. Submit the X thread link plus the long-form link on Superteam.
-
-If only one link is allowed, submit the X thread link.
+1. Public long-form article.
+2. X thread version.
+3. GitHub repository with source notes and factual boundaries.
 
 ## Factual Boundaries
 
@@ -60,4 +50,3 @@ This submission avoids:
 - official FIFA affiliation claims
 - smart-contract audit claims
 - legal availability claims for every jurisdiction
-

@@ -23,6 +23,37 @@ The product page already points toward this loop with "Next Draw," "Buy a Ticket
 
 That is the strongest part of the campaign: the app does not need to explain every Solana detail up front. It can lead with the familiar lottery/game loop, then use Solana as the trust layer underneath.
 
+## Product Surface Breakdown
+
+The most useful way to read Kaching is as a set of connected surfaces, not as one static lottery page:
+
+| Product surface | What it does | Why it matters | Suggested improvement |
+| --- | --- | --- | --- |
+| Next Draw | Shows the next live entry point | Gives users one clear action | Add countdown, pot size, and ticket status in one card |
+| Buy Ticket | Converts attention into participation | Keeps the loop simple and consumer-facing | Keep wallet and ticket steps short, with clear confirmation |
+| View Result | Shows the draw outcome | Turns the campaign into a repeat visit habit | Lead with winning numbers and "did I win?" status |
+| View OnChain | Opens the proof layer | Makes the trust claim inspectable | Explain what the user is verifying before sending them to an explorer |
+| My Tickets Dashboard | Shows personal participation | Makes results feel personal, not generic | Group active, pending, and past tickets by draw |
+| My Referral | Turns each draw into a sharing moment | Creates low-friction distribution before the next draw | Tie referral prompts to countdowns and new draw launches |
+| Leaderboard | Adds social competition | Gives users a reason to return between draws | Add weekly and campaign-specific ranks |
+
+This product map is why the WC campaign is interesting. Each surface has a job: entry, result, proof, personal history, sharing, or status. The campaign becomes stronger when those surfaces feel like one continuous path.
+
+## User Path Map
+
+```text
+Landing page
+-> Next Draw
+-> Buy Ticket
+-> Wait for Draw
+-> View Result
+-> View OnChain Proof
+-> Check My Tickets
+-> Refer / Return for Next Draw
+```
+
+This is the path Kaching should make obvious. The landing page should answer "what can I do now?", the result page should answer "what happened?", and the proof layer should answer "why can I trust it?"
+
 The campaign should keep that hierarchy intact:
 
 1. First, make the game obvious.

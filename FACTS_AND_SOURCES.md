@@ -14,7 +14,7 @@ Observed facts:
 - Prize split: 500 USDC first, 300 USDC second, 200 USDC third
 - Skill: Content
 - Winner announcement: July 24, 2026
-- Submissions observed: 10
+- Submissions observed: approximately 10-11 during preparation and submission
 
 ## Superteam Sponsor Page
 
@@ -71,4 +71,3 @@ Safer language:
 - "World Cup-themed campaign"
 - "Solana-native consumer app"
 - "users should check local rules and platform terms"
-

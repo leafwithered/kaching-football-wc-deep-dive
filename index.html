@@ -171,7 +171,7 @@
 
       .flow {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 8px;
         margin: 28px 0;
       }
@@ -203,6 +203,34 @@
         margin: 22px 0;
       }
 
+      .path-map {
+        border: 1px solid var(--line);
+        background: #f7faf8;
+        padding: 18px;
+        margin: 24px 0;
+        font-weight: 700;
+        color: #20342b;
+      }
+
+      .product-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 0.94rem;
+      }
+
+      .product-table th,
+      .product-table td {
+        border: 1px solid var(--line);
+        padding: 11px 12px;
+        vertical-align: top;
+        text-align: left;
+      }
+
+      .product-table th {
+        background: #f2f6f3;
+      }
+
       .score {
         border-left: 4px solid var(--gold);
         background: #fff8e7;
@@ -229,9 +257,14 @@
       @media (max-width: 860px) {
         .hero-grid,
         .layout,
-        .flow,
         .scorecard {
           grid-template-columns: 1fr;
+        }
+
+        .product-table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
         }
 
         aside {
@@ -296,6 +329,71 @@
             "View OnChain," "My Tickets Dashboard," and "Leaderboard." These are not abstract DeFi actions.
             They are consumer actions.
           </p>
+
+          <h2>Product Surface Breakdown</h2>
+          <p>
+            The most useful way to read Kaching is as a set of connected surfaces, not as one static lottery page.
+            Each surface has a job: entry, result, proof, personal history, sharing, or status.
+          </p>
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Product surface</th>
+                <th>What it does</th>
+                <th>Why it matters</th>
+                <th>Suggested improvement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Next Draw</td>
+                <td>Shows the next live entry point</td>
+                <td>Gives users one clear action</td>
+                <td>Add countdown, pot size, and ticket status in one card</td>
+              </tr>
+              <tr>
+                <td>Buy Ticket</td>
+                <td>Converts attention into participation</td>
+                <td>Keeps the loop simple and consumer-facing</td>
+                <td>Keep wallet and ticket steps short, with clear confirmation</td>
+              </tr>
+              <tr>
+                <td>View Result</td>
+                <td>Shows the draw outcome</td>
+                <td>Turns the campaign into a repeat visit habit</td>
+                <td>Lead with winning numbers and "did I win?" status</td>
+              </tr>
+              <tr>
+                <td>View OnChain</td>
+                <td>Opens the proof layer</td>
+                <td>Makes the trust claim inspectable</td>
+                <td>Explain what the user is verifying before sending them to an explorer</td>
+              </tr>
+              <tr>
+                <td>My Tickets Dashboard</td>
+                <td>Shows personal participation</td>
+                <td>Makes results feel personal, not generic</td>
+                <td>Group active, pending, and past tickets by draw</td>
+              </tr>
+              <tr>
+                <td>My Referral</td>
+                <td>Turns each draw into a sharing moment</td>
+                <td>Creates distribution before the next draw</td>
+                <td>Tie referral prompts to countdowns and new draw launches</td>
+              </tr>
+              <tr>
+                <td>Leaderboard</td>
+                <td>Adds social competition</td>
+                <td>Gives users a reason to return between draws</td>
+                <td>Add weekly and campaign-specific ranks</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>User Path Map</h2>
+          <div class="path-map">
+            Landing page -> Next Draw -> Buy Ticket -> Wait for Draw -> View Result -> View OnChain Proof -> Check My Tickets -> Refer / Return for Next Draw
+          </div>
 
           <h2>Why Solana Fits</h2>
           <p>
