@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaching Short Video Generator</title>
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        background: #111418;
+        color: #f8fafc;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      main {
+        display: grid;
+        gap: 16px;
+        width: min(960px, calc(100% - 32px));
+      }
+
+      canvas {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #fbfbf8;
+        border: 1px solid #333b46;
+      }
+
+      .status {
+        color: #b7c0cc;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas id="stage" width="1280" height="720"></canvas>
+      <div class="status" id="status">Preparing video...</div>
+      <textarea id="video-data" hidden></textarea>
+    </main>
+
+    <script>
+      const canvas = document.getElementById("stage");
+      const ctx = canvas.getContext("2d");
+      const statusEl = document.getElementById("status");
+      const dataEl = document.getElementById("video-data");
+
+      const slides = [
+        {
+          kicker: "Kaching Football WC Campaign",
+          title: "A familiar sports loop can become a Solana consumer habit",
+          body: [
+            "Kaching starts with something users already understand:",
+            "buy a ticket, wait for the draw, check the result, verify the proof."
+          ]
+        },
+        {
+          kicker: "User Path",
+          title: "Ticket -> Draw -> Result -> Proof -> Return",
+          body: [
+            "The strongest path is simple enough for mainstream users.",
+            "The blockchain layer should support trust without becoming the whole story."
+          ]
+        },
+        {
+          kicker: "Product Surface",
+          title: "Each screen has a job",
+          body: [
+            "Next Draw creates urgency. Buy Ticket converts intent.",
+            "View Result closes the loop. View OnChain turns trust into something inspectable."
+          ]
+        },
+        {
+          kicker: "Why Solana",
+          title: "Low-friction verification matters here",
+          body: [
+            "Lottery-style products need frequent, low-cost interactions.",
+            "Fast settlement and public verification make the result feel less like a black box."
+          ]
+        },
+        {
+          kicker: "Growth Loop",
+          title: "World Cup attention can create repeat visits",
+          body: [
+            "Countdowns, match days, draw reveals, leaderboards, referrals, and winner moments",
+            "can turn each draw into a campaign beat."
+          ]
+        },
+        {
+          kicker: "UX Recommendation",
+          title: "Make proof understandable before sending users to an explorer",
+          body: [
+            "The result page should answer: what happened, did I win, where is the proof,",
+            "and what should I do next?"
+          ]
+        },
+        {
+          kicker: "Final Take",
+          title: "Kaching can make on-chain verification feel like a consumer feature",
+          body: [
+            "If the result is clear and the proof is one click away,",
+            "the WC campaign can turn trust into a repeatable product loop."
+          ]
+        }
+      ];
+
+      const durationPerSlide = 7;
+      const fps = 30;
+      const totalFrames = slides.length * durationPerSlide * fps;
+
+      function wrapText(text, maxWidth, font) {
+        ctx.font = font;
+        const words = text.split(" ");
+        const lines = [];
+        let line = "";
+
+        for (const word of words) {
+          const test = line ? `${line} ${word}` : word;
+          if (ctx.measureText(test).width > maxWidth && line) {
+            lines.push(line);
+            line = word;
+          } else {
+            line = test;
+          }
+        }
+
+        if (line) lines.push(line);
+        return lines;
+      }
+
+      function drawSlide(slide, progress) {
+        ctx.fillStyle = "#fbfbf8";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#1d8b5f";
+        ctx.fillRect(0, 0, 20, canvas.height);
+
+        ctx.fillStyle = "#225f91";
+        ctx.fillRect(20, 0, canvas.width - 20, 16);
+
+        ctx.fillStyle = "#c18b22";
+        ctx.fillRect(20, canvas.height - 16, canvas.width - 20, 16);
+
+        ctx.fillStyle = "#1d8b5f";
+        ctx.font = "700 32px Arial";
+        ctx.fillText(slide.kicker.toUpperCase(), 78, 112);
+
+        ctx.fillStyle = "#15171a";
+        const titleLines = wrapText(slide.title, 1040, "800 64px Arial");
+        ctx.font = "800 64px Arial";
+        titleLines.forEach((line, index) => {
+          ctx.fillText(line, 78, 210 + index * 76);
+        });
+
+        let y = 382 + Math.max(0, titleLines.length - 1) * 76;
+        ctx.fillStyle = "#29313c";
+        ctx.font = "400 34px Arial";
+        slide.body.forEach((paragraph) => {
+          const lines = wrapText(paragraph, 1060, "400 34px Arial");
+          lines.forEach((line) => {
+            ctx.fillText(line, 78, y);
+            y += 46;
+          });
+          y += 12;
+        });
+
+        ctx.fillStyle = "#15171a";
+        ctx.font = "700 24px Arial";
+        ctx.fillText("leafwithered.github.io/kaching-football-wc-deep-dive", 78, 650);
+
+        ctx.fillStyle = "#d9dee7";
+        ctx.fillRect(78, 674, 1124, 8);
+        ctx.fillStyle = "#1d8b5f";
+        ctx.fillRect(78, 674, 1124 * progress, 8);
+      }
+
+      async function generateVideo() {
+        window.generatedVideoDataUrl = "";
+        statusEl.textContent = "Recording short video...";
+
+        const stream = canvas.captureStream(fps);
+        const mimeTypes = [
+          "video/webm;codecs=vp9",
+          "video/webm;codecs=vp8",
+          "video/webm"
+        ];
+        const mimeType = mimeTypes.find((type) => MediaRecorder.isTypeSupported(type)) || "";
+        const recorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+        const chunks = [];
+
+        recorder.ondataavailable = (event) => {
+          if (event.data && event.data.size) chunks.push(event.data);
+        };
+
+        const done = new Promise((resolve) => {
+          recorder.onstop = resolve;
+        });
+
+        recorder.start();
+
+        for (let frame = 0; frame < totalFrames; frame += 1) {
+          const slideIndex = Math.min(slides.length - 1, Math.floor(frame / (durationPerSlide * fps)));
+          drawSlide(slides[slideIndex], frame / totalFrames);
+          await new Promise((resolve) => setTimeout(resolve, 1000 / fps));
+        }
+
+        recorder.stop();
+        await done;
+
+        const blob = new Blob(chunks, { type: "video/webm" });
+        const response = await fetch("/save-video", { method: "POST", body: blob });
+        const saved = await response.json();
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          window.generatedVideoDataUrl = reader.result;
+          dataEl.value = reader.result;
+          statusEl.textContent = `Video ready: ${(blob.size / 1024 / 1024).toFixed(2)} MB, saved ${saved.bytes} bytes`;
+        };
+        reader.readAsDataURL(blob);
+      }
+
+      drawSlide(slides[0], 0);
+      generateVideo();
+    </script>
+  </body>
+</html>

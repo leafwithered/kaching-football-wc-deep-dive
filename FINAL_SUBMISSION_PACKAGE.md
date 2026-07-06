@@ -10,6 +10,10 @@ GitHub repository:
 
 https://github.com/leafwithered/kaching-football-wc-deep-dive
 
+Short video summary:
+
+https://leafwithered.github.io/kaching-football-wc-deep-dive/short-video.html
+
 Superteam listing:
 
 https://superteam.fun/earn/listing/deep-dive-on-kaching-football-wc-campaign
@@ -42,6 +46,9 @@ https://leafwithered.github.io/kaching-football-wc-deep-dive/
 
 X thread:
 https://x.com/leafmyx/status/2074080946538619323?s=20
+
+Short video summary:
+https://leafwithered.github.io/kaching-football-wc-deep-dive/short-video.html
 
 GitHub repository:
 https://github.com/leafwithered/kaching-football-wc-deep-dive
