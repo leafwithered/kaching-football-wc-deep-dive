@@ -25,7 +25,7 @@ Fastest option:
 Paste from `SUBMISSION_TEXT.md`, then replace:
 
 - `https://leafwithered.github.io/kaching-football-wc-deep-dive/`
-- `PASTE_X_THREAD_LINK_HERE`
+- `https://x.com/leafmyx/status/2074080946538619323?s=20`
 
 ## Final Checklist
 

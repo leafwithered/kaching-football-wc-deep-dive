@@ -16,7 +16,7 @@ https://leafwithered.github.io/kaching-football-wc-deep-dive/
 
 X thread:
 
-PASTE_X_THREAD_LINK_HERE
+https://x.com/leafmyx/status/2074080946538619323?s=20
 
 Optional source links:
 
