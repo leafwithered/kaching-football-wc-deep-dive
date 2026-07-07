@@ -1,0 +1,241 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaching Recording Control Room</title>
+    <style>
+      :root {
+        --bg: #0b0d10;
+        --panel: #151a1f;
+        --ink: #f7fafc;
+        --muted: #9ca8b5;
+        --green: #14c784;
+        --cyan: #20d8ff;
+        --red: #ff3028;
+        --line: #2a333d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        min-height: 100vh;
+      }
+
+      aside {
+        border-right: 1px solid var(--line);
+        padding: 22px;
+        background: #101419;
+      }
+
+      section {
+        padding: 26px;
+      }
+
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 1.05;
+      }
+
+      h2 {
+        color: var(--cyan);
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .timer {
+        display: grid;
+        place-items: center;
+        width: 170px;
+        height: 170px;
+        border: 2px solid var(--green);
+        border-radius: 50%;
+        margin: 22px 0;
+        color: var(--green);
+        font-size: 36px;
+        font-weight: 800;
+      }
+
+      button {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: #1b2229;
+        color: var(--ink);
+        padding: 12px;
+        margin: 6px 0;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:hover {
+        border-color: var(--cyan);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        padding: 18px;
+        min-height: 210px;
+      }
+
+      .script {
+        font-size: clamp(24px, 3.2vw, 42px);
+        line-height: 1.35;
+      }
+
+      .small {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .cta {
+        color: var(--red);
+        font-weight: 900;
+      }
+
+      code {
+        color: var(--cyan);
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 800px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <h1>Kaching Football WC Recording</h1>
+        <p class="small">Use this page beside Kaching while recording. Replace the referral link before final upload.</p>
+        <div class="timer" id="timer">3:20</div>
+        <button data-jump="0">Hook</button>
+        <button data-jump="1">What Kaching Is</button>
+        <button data-jump="2">Why Solana</button>
+        <button data-jump="3">Football WC</button>
+        <button data-jump="4">Walkthrough</button>
+        <button data-jump="5">CTA</button>
+      </aside>
+      <section>
+        <div class="grid">
+          <article class="card">
+            <h2 id="title">Hook</h2>
+            <p class="script" id="script"></p>
+          </article>
+          <article class="card">
+            <h2>On-Screen Checklist</h2>
+            <p class="small" id="checklist"></p>
+          </article>
+          <article class="card">
+            <h2>Safety Line</h2>
+            <p class="script">Always review wallet popups yourself: site, token, amount, and approval scope.</p>
+          </article>
+          <article class="card">
+            <h2>End Card</h2>
+            <p class="script cta">Join Kaching Football WC:</p>
+            <p class="script"><code>https://cn.kaching.vip/r/fXMvMLp</code></p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script>
+      const slides = [
+        {
+          title: "Hook",
+          script:
+            "Most crypto lottery products ask users to trust a black box. Kaching tries to make the football lottery loop simple while keeping ticket, draw, result, and proof more transparent on Solana.",
+          checklist: "Show Kaching homepage and Football WC visual."
+        },
+        {
+          title: "What Kaching Is",
+          script:
+            "Kaching is a fair on-chain lottery experience. The simple loop is connect wallet, add funds, buy a ticket, wait for the draw, check results, and inspect proof.",
+          checklist: "Mention ticket, draw, result, proof."
+        },
+        {
+          title: "Why Solana",
+          script:
+            "Solana fits because users may buy small tickets, check results often, and come back for the next draw. That needs low fees, fast transactions, and wallet-native UX.",
+          checklist: "Mention low fees, speed, verifiable activity."
+        },
+        {
+          title: "Football WC Campaign",
+          script:
+            "The Football WC campaign turns football attention into a repeatable draw loop: match days, countdowns, draw reveals, leaderboards, referrals, and winner moments.",
+          checklist: "Show FIFA WC 2026, pot size, ticket price, countdown, slots."
+        },
+        {
+          title: "Live Walkthrough",
+          script:
+            "Open Kaching.vip, connect Phantom, show funds, return to Football WC, click Buy Ticket, choose one ticket, review cost, approve only if the wallet popup is correct, then show My Tickets.",
+          checklist: "Show login, wallet, funds, Buy Ticket, My Tickets Dashboard."
+        },
+        {
+          title: "CTA",
+          script:
+            "That is the Kaching loop: connect wallet, add funds, buy a ticket, track results, and verify proof. Use my referral link in the description to join the Football WC campaign.",
+          checklist: "Show referral link on screen and in video description."
+        }
+      ];
+
+      let current = 0;
+      const title = document.getElementById("title");
+      const script = document.getElementById("script");
+      const checklist = document.getElementById("checklist");
+      const timer = document.getElementById("timer");
+
+      function render(index) {
+        current = index;
+        title.textContent = slides[index].title;
+        script.textContent = slides[index].script;
+        checklist.textContent = slides[index].checklist;
+      }
+
+      document.querySelectorAll("button[data-jump]").forEach((button) => {
+        button.addEventListener("click", () => render(Number(button.dataset.jump)));
+      });
+
+      let seconds = 200;
+      setInterval(() => {
+        seconds = Math.max(0, seconds - 1);
+        const m = String(Math.floor(seconds / 60));
+        const s = String(seconds % 60).padStart(2, "0");
+        timer.textContent = `${m}:${s}`;
+      }, 1000);
+
+      render(0);
+    </script>
+  </body>
+</html>
+

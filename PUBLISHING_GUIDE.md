@@ -1,38 +1,48 @@
-# Publishing Guide
+﻿# Publishing Guide
 
-## Recommended Path
+## Main Path
 
-1. Publish the X thread from `X_THREAD.md`.
-2. Publish the long-form article from `KACHING_DEEP_DIVE_ARTICLE.md`.
-3. Submit the X thread link and long-form link on Superteam.
+The bounty should be submitted as a video, not as the old article package.
 
-## Best Long-Form Platforms
+1. Get the real Kaching referral link from `My Referral`.
+2. Record a 2-5 minute video using `VIDEO_SCRIPT_FINAL_3MIN.md`, `recording-control-room.html`, and `RECORDING_RUNBOOK.md`.
+3. The video must show Kaching.vip, wallet connection, funds/add-funds page, Football WC draw, and buying at least one ticket if possible.
+4. Upload the video to YouTube, X, TikTok, Instagram Reels, or Shorts.
+5. Put the referral link in the video description and show it on screen.
+6. Post the video link on X using `X_VIDEO_POST.md`.
+7. Update the Superteam submission using `SUPERTEAM_VIDEO_SUBMISSION.md`.
 
-Use one of these:
+## Recommended Platform
 
-- Notion public page
-- Substack post
-- Mirror post
-- GitHub Pages static article
+Use YouTube first because it gives a stable public link and a proper description field for the referral link.
 
-Fastest option:
+## Required Replacements
 
-- Use the generated `public/index.html`.
-- Put it in a new GitHub repo or GitHub Pages branch.
+Replace these before publishing:
 
-## Superteam Submission Text
+- `VIDEO_LINK`
+- `X_POST_LINK`
 
-Paste from `SUBMISSION_TEXT.md`, then replace:
+## Cost Limit
 
-- `https://leafwithered.github.io/kaching-football-wc-deep-dive/`
-- `https://x.com/leafmyx/status/2074080946538619323?s=20`
+Do not spend more than 3 USDC total.
+
+The visible FIFA WC 2026 ticket price was 0.4 USDC per ticket. Keep any add-funds or ticket purchase flow below the 3 USDC limit, and remember that the user must personally approve wallet transactions.
 
 ## Final Checklist
 
-- X thread is posted and public
-- Long-form article is public
-- Submission link opens without login
-- No claims of guaranteed profit
-- No claim of official FIFA affiliation
-- No claim that smart contracts were audited
-- Uses Kaching source links and Superteam listing link
+- Video is public
+- Runtime is within 2-5 minutes
+- Voice or captions explain Kaching clearly
+- Football WC campaign is explained
+- Live Kaching flow is shown
+- Referral link appears on screen
+- Referral link appears in video description
+- At least one ticket purchase is shown if possible
+- X post links to the video
+- Superteam submission includes video link and payout wallet
+- No seed phrase, private key, or recovery phrase is visible
+- No guaranteed-profit claim
+- No official FIFA-affiliation claim
+- No unsupported smart-contract audit claim
+
