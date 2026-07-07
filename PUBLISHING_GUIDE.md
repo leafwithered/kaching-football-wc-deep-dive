@@ -16,12 +16,11 @@ The bounty should be submitted as a video, not as the old article package.
 
 Use YouTube first because it gives a stable public link and a proper description field for the referral link.
 
-## Required Replacements
+## Final Public Links
 
-Replace these before publishing:
-
-- `VIDEO_LINK`
-- `X_POST_LINK`
+- Video: `https://youtu.be/GCqrup6-3f8`
+- X post: `https://x.com/leafmyx/status/2074432138708217881`
+- Referral: `https://cn.kaching.vip/r/fXMvMLp`
 
 ## Cost Limit
 
@@ -45,4 +44,5 @@ The visible FIFA WC 2026 ticket price was 0.4 USDC per ticket. Keep any add-fund
 - No guaranteed-profit claim
 - No official FIFA-affiliation claim
 - No unsupported smart-contract audit claim
+- Clear educational / not-financial-advice boundary
 

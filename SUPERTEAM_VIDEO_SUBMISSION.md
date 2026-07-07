@@ -1,15 +1,11 @@
 ﻿# Superteam Video Submission
 
-Replace before submitting:
-
-- `VIDEO_LINK`
-- `X_POST_LINK`
-- `https://cn.kaching.vip/r/fXMvMLp`
+Submitted final version.
 
 ## Video Link
 
 ```text
-VIDEO_LINK
+https://youtu.be/GCqrup6-3f8
 ```
 
 ## Solana Wallet Address
@@ -27,23 +23,33 @@ The video explains Kaching as a fair on-chain lottery on Solana, why Solana is u
 
 It includes a live walkthrough covering:
 - opening Kaching.vip
-- connecting a wallet
+- logging in / connecting a wallet
 - finding Football WC / FIFA WC 2026 campaign draws
 - checking ticket price, pot size, countdown, and slots
 - adding funds / preparing wallet funds
-- buying at least one ticket
-- finding where to track tickets and results
+- buying one real ticket
+- showing transaction history proof for a completed 0.4 USDC purchase
 
 Referral link:
 https://cn.kaching.vip/r/fXMvMLp
 
+Purchase proof included:
+- Pot ID: TAF80BF742A40109
+- Chain: Solana
+- Token: USDC
+- Amount: 0.4 USDC
+- Status: completed
+
 Video:
-VIDEO_LINK
+https://youtu.be/GCqrup6-3f8
 
 X submission post:
-X_POST_LINK
+https://x.com/leafmyx/status/2074432138708217881
 
 Support article:
 https://leafwithered.github.io/kaching-football-wc-deep-dive/
+
+Risk boundary:
+This is educational content for the Kaching campaign and is not financial advice. Kaching Football WC is not presented here as an official FIFA product.
 ```
 

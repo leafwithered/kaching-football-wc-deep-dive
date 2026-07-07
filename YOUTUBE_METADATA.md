@@ -23,8 +23,15 @@ What this video covers:
 - How to visit Kaching.vip
 - How to connect a wallet
 - How to add funds
-- How to buy a Football WC ticket
+- How to buy a Football WC ticket with a real 0.4 USDC example
 - Where to track tickets, results, referrals, and on-chain proof
+
+Demo proof shown in the video:
+- Pot ID: TAF80BF742A40109
+- Chain: Solana
+- Token: USDC
+- Ticket purchase amount: 0.4 USDC
+- Kaching transaction status: completed
 
 Support article:
 https://leafwithered.github.io/kaching-football-wc-deep-dive/
@@ -32,7 +39,7 @@ https://leafwithered.github.io/kaching-football-wc-deep-dive/
 My X:
 https://x.com/leafmyx
 
-This video is educational content for the Kaching Football WC Campaign bounty. Always review wallet transactions yourself and only use funds you are comfortable spending.
+This video is educational content for the Kaching Football WC Campaign bounty and is not financial advice. Kaching Football WC is not presented here as an official FIFA product. Always review wallet transactions yourself and only use funds you are comfortable spending.
 ```
 
 ## Tags

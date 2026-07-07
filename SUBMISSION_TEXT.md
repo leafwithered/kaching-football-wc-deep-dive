@@ -13,13 +13,16 @@ Referral link:
 https://cn.kaching.vip/r/fXMvMLp
 
 Video:
-VIDEO_LINK
+https://youtu.be/GCqrup6-3f8
 
 X post:
-X_POST_LINK
+https://x.com/leafmyx/status/2074432138708217881
 
 Support article:
 https://leafwithered.github.io/kaching-football-wc-deep-dive/
+
+Risk boundary:
+This is educational content for the Kaching campaign and is not financial advice. Kaching Football WC is not presented here as an official FIFA product.
 ```
 
 ## Payout Wallet

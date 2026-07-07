@@ -1,4 +1,4 @@
-﻿# Kaching Football WC Campaign Video Submission
+# Kaching Football WC Campaign Video Submission
 
 Target listing:
 
@@ -12,36 +12,57 @@ Product:
 
 https://kaching.vip/
 
-## Correct Submission Type
+## Final Submission Type
 
-This bounty is video-first.
+This bounty is video-first. The final deliverable is a public 2-5 minute explainer and walkthrough video.
 
-The main deliverable should be a public 2-5 minute explainer and walkthrough video that:
+## Final Local Video
 
-- explains Kaching as a fair on-chain lottery on Solana
-- explains why Solana is useful for low-fee, fast, verifiable participation
-- breaks down the Football WC campaign in simple language
-- shows the live flow: visit Kaching.vip, sign up or connect wallet, add funds, buy at least one ticket
-- includes the creator referral link on screen and in the video description
-- is posted publicly, then submitted to Superteam with the Solana payout wallet
+```text
+KACHING_FOOTBALL_WC_FINAL_VIDEO.webm
+```
 
-## Current Materials
+Approximate runtime: 3 minutes 17 seconds.
 
-- `VIDEO_SCRIPT_3MIN.md` - final narration script for a 2-5 minute video
-- `VIDEO_SCRIPT_FINAL_3MIN.md` - stronger final version optimized for the bounty
-- `RECORDING_RUNBOOK.md` - exact screen recording sequence
-- `recording-control-room.html` - browser-based recording helper / cue card page
-- `YOUTUBE_METADATA.md` - title, description, tags, and pinned comment
-- `X_VIDEO_POST.md` - X/Twitter post for the video submission
-- `SUPERTEAM_VIDEO_SUBMISSION.md` - Superteam submission text
-- `KACHING_VIDEO_BOUNTY_PLAN.md` - bounty requirement audit
-- `DEPOSIT_STUCK_RECOVERY.md` - safe recovery steps if the Kaching deposit stalls
-- `teleprompter.html` - local teleprompter page for recording
-- `KACHING_SHORT_VIDEO.webm` - old silent support video, not enough by itself
-- `KACHING_DEEP_DIVE_ARTICLE.md` - support article only
-- `X_THREAD.md` - support thread only
+The video covers:
+
+- what Kaching is
+- why Solana fits a fair, low-fee on-chain lottery experience
+- how the Football WC / FIFA WC 2026 campaign works
+- how a user joins: visit Kaching, log in/connect wallet, add funds, buy a ticket
+- real purchase proof from Kaching transaction history
+- referral CTA
+
+## Real Purchase Proof
+
+- Pot ID: `TAF80BF742A40109`
+- Chain: `SOLANA`
+- Token: `USDC`
+- Ticket count: `1`
+- Amount: `0.4 USDC`
+- Status: `completed`
+- Post-purchase Kaching balance: `0.600 USDC`
+
+Proof files:
+
+- `public/proofs/02_fifa_wc_draw_detail.png`
+- `public/proofs/03_buy_ticket_order_0_4_usdc.png`
+- `public/proofs/04_transaction_history_completed_0_4_usdc.png`
+- `FINAL_PURCHASE_PROOF.md`
 
 ## Public Support Links
+
+Final public video:
+
+```text
+https://youtu.be/GCqrup6-3f8
+```
+
+Final X submission post:
+
+```text
+https://x.com/leafmyx/status/2074432138708217881
+```
 
 Support article:
 
@@ -55,26 +76,25 @@ Support GitHub repository:
 https://github.com/leafwithered/kaching-football-wc-deep-dive
 ```
 
-## Not Final Until These Are Filled
-
-- `VIDEO_LINK`
-- `X_POST_LINK`
-
-## Current Live-Flow Status
-
-Referral link has been collected:
+Referral link:
 
 ```text
 https://cn.kaching.vip/r/fXMvMLp
 ```
 
-The final public video still needs the full live walkthrough recording and public video/X links before Superteam submission.
-
-## Payout Wallet
+Payout wallet:
 
 ```text
 CwxV8FZwVKhVMqPqp8BV6zuoGDc12CA4qkz7jdmhnwWB
 ```
+
+## Final Posting Files
+
+- `YOUTUBE_METADATA.md`
+- `X_VIDEO_POST.md`
+- `SUPERTEAM_VIDEO_SUBMISSION.md`
+
+Superteam has been updated with the final YouTube video link, X post, payout wallet, referral link, and real purchase proof.
 
 ## Factual Boundaries
 
@@ -84,4 +104,6 @@ Do not claim:
 - official FIFA affiliation
 - audited smart contracts unless Kaching provides that source
 - legal availability in every jurisdiction
+- financial advice
 
+This submission is educational content for the Kaching campaign and is not financial advice. Kaching Football WC is not presented here as an official FIFA product.

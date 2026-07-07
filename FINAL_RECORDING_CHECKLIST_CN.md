@@ -30,7 +30,7 @@ Placeholders to replace:
 
 ```text
 https://cn.kaching.vip/r/fXMvMLp
-VIDEO_LINK
-X_POST_LINK
+Video: https://youtu.be/GCqrup6-3f8
+X post: https://x.com/leafmyx/status/2074432138708217881
 ```
 
