@@ -19,17 +19,17 @@ Video structure:
 6. 15 seconds: show My Tickets / Results / OnChain entry points.
 7. 10 seconds: referral link CTA.
 
-Publishing order:
+Publishing status:
 
-1. Upload to YouTube.
-2. Put referral link in YouTube description.
-3. Post on X with YouTube link and referral link.
-4. Update Superteam submission with video link and wallet address.
+1. Uploaded to YouTube: `https://youtu.be/GCqrup6-3f8`
+2. Referral link included in the YouTube description: `https://cn.kaching.vip/r/fXMvMLp`
+3. Posted on X with YouTube link and referral link: `https://x.com/leafmyx/status/2074432138708217881`
+4. Updated Superteam submission with video link, X post, wallet address, referral link, and proof links.
 
-Placeholders to replace:
+Final public links:
 
 ```text
-https://cn.kaching.vip/r/fXMvMLp
+Referral: https://cn.kaching.vip/r/fXMvMLp
 Video: https://youtu.be/GCqrup6-3f8
 X post: https://x.com/leafmyx/status/2074432138708217881
 ```

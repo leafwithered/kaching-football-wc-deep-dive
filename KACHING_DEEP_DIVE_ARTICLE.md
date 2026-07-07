@@ -172,7 +172,7 @@ The interesting metric is not only how many users buy a ticket once. It is how m
 
 Kaching should be careful with how the campaign is framed.
 
-The product should avoid language that implies guaranteed profit, guaranteed winning, or official sports affiliation unless explicitly true. Lottery-style products also vary by jurisdiction, so user-facing copy should keep participation terms and local restrictions clear.
+The product should avoid language that implies guaranteed profit, guaranteed winning, or official sports affiliation unless explicitly true. Lottery-style products also vary by jurisdiction, so user-facing copy should keep participation terms and local restrictions clear. This submission is educational content, not financial advice, and it does not present Kaching Football WC as an official FIFA product.
 
 The safest positioning is:
 

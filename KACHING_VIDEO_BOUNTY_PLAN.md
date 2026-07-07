@@ -16,25 +16,26 @@ The required deliverable is a short explainer video that:
 
 ## Current Status
 
-Prepared but not final:
+Final public submission is complete:
 
-- written deep dive article
-- X thread
-- GitHub repo
-- short silent WebM summary
+- YouTube video: `https://youtu.be/GCqrup6-3f8`
+- X submission post: `https://x.com/leafmyx/status/2074432138708217881`
+- Referral link: `https://cn.kaching.vip/r/fXMvMLp`
+- Real purchase proof: `TAF80BF742A40109`, `0.4 USDC`, completed on Solana.
+- Support article: `https://leafwithered.github.io/kaching-football-wc-deep-dive/`
+- GitHub repo: `https://github.com/leafwithered/kaching-football-wc-deep-dive`
 
-These are support materials only. They do not satisfy the main bounty requirement by themselves.
+The original written deep dive, X thread, GitHub repo, and short silent WebM remain support materials. The final bounty submission leads with the public 3+ minute YouTube walkthrough.
 
-## Missing Before Final Submission
+## Completed Final Submission Steps
 
-1. Kaching referral link from `My Referral`.
-2. Real screen recording of the Kaching user flow.
-3. Wallet connection confirmation by the user.
-4. Deposit / add funds step, if needed.
-5. Purchase of at least one Football campaign ticket, if possible.
-6. Public video upload link.
-7. X post with the video submission link.
-8. Superteam `Edit Submission` update.
+1. Collected referral link from `My Referral`.
+2. Completed the Kaching user flow with wallet connection and funding.
+3. Bought one Football WC / Daily Jackpot ticket for `0.4 USDC`.
+4. Captured public proof screenshots and notes.
+5. Uploaded the final public video.
+6. Posted the video on X with the referral link.
+7. Updated the Superteam submission with the video link, X post, payout wallet, referral link, and proof links.
 
 ## Safety Rules
 

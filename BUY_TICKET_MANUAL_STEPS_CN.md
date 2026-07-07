@@ -46,9 +46,9 @@ I am buying one Football WC ticket here. Before approving, I am checking the wal
 
 ## After Buying
 
-1. Copy the Kaching referral link from menu -> `My Referral`.
-2. Send the referral link to Codex.
-3. Send the YouTube video link to Codex.
-4. Send the X post link to Codex.
+Final purchase and publishing status:
 
-Codex can then replace all placeholders in the final submission text.
+- Referral link: `https://cn.kaching.vip/r/fXMvMLp`
+- YouTube video: `https://youtu.be/GCqrup6-3f8`
+- X post: `https://x.com/leafmyx/status/2074432138708217881`
+- Purchase proof: `TAF80BF742A40109`, `0.4 USDC`, completed on Solana.
