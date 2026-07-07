@@ -21,6 +21,10 @@ https://x.com/leafmyx/status/2074432138708217881
 Support article:
 https://leafwithered.github.io/kaching-football-wc-deep-dive/
 
+Public proof notes and screenshots:
+https://github.com/leafwithered/kaching-football-wc-deep-dive/blob/main/FINAL_PURCHASE_PROOF.md
+https://github.com/leafwithered/kaching-football-wc-deep-dive/tree/main/public/proofs
+
 Risk boundary:
 This is educational content for the Kaching campaign and is not financial advice. Kaching Football WC is not presented here as an official FIFA product.
 ```

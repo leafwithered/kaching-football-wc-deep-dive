@@ -17,11 +17,22 @@ CwxV8FZwVKhVMqPqp8BV6zuoGDc12CA4qkz7jdmhnwWB
 ## Extra Notes
 
 ```text
-I created a 2-5 minute explainer and walkthrough video for the Kaching Football WC campaign.
+Final Kaching Football WC video submission.
 
-The video explains Kaching as a fair on-chain lottery on Solana, why Solana is useful for low-fee and verifiable participation, how the Football WC campaign works, and how a new user can join.
+Main video:
+https://youtu.be/GCqrup6-3f8
 
-It includes a live walkthrough covering:
+X submission post:
+https://x.com/leafmyx/status/2074432138708217881
+
+Solana wallet for bounty payout:
+CwxV8FZwVKhVMqPqp8BV6zuoGDc12CA4qkz7jdmhnwWB
+
+Referral link included in the video, YouTube description, and X post:
+https://cn.kaching.vip/r/fXMvMLp
+
+The video is a 3+ minute explainer/walkthrough covering:
+
 - opening Kaching.vip
 - logging in / connecting a wallet
 - finding Football WC / FIFA WC 2026 campaign draws
@@ -30,9 +41,6 @@ It includes a live walkthrough covering:
 - buying one real ticket
 - showing transaction history proof for a completed 0.4 USDC purchase
 
-Referral link:
-https://cn.kaching.vip/r/fXMvMLp
-
 Purchase proof included:
 - Pot ID: TAF80BF742A40109
 - Chain: Solana
@@ -40,14 +48,13 @@ Purchase proof included:
 - Amount: 0.4 USDC
 - Status: completed
 
-Video:
-https://youtu.be/GCqrup6-3f8
+Public proof notes and screenshots:
+https://github.com/leafwithered/kaching-football-wc-deep-dive/blob/main/FINAL_PURCHASE_PROOF.md
+https://github.com/leafwithered/kaching-football-wc-deep-dive/tree/main/public/proofs
 
-X submission post:
-https://x.com/leafmyx/status/2074432138708217881
-
-Support article:
+Support article / source notes:
 https://leafwithered.github.io/kaching-football-wc-deep-dive/
+https://github.com/leafwithered/kaching-football-wc-deep-dive
 
 Risk boundary:
 This is educational content for the Kaching campaign and is not financial advice. Kaching Football WC is not presented here as an official FIFA product.
