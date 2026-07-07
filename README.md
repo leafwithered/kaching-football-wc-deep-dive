@@ -16,13 +16,13 @@ https://kaching.vip/
 
 This bounty is video-first. The final deliverable is a public 2-5 minute explainer and walkthrough video.
 
-## Final Local Video
+## Final Public Video
 
 ```text
-KACHING_FOOTBALL_WC_FINAL_VIDEO.webm
+https://youtu.be/GCqrup6-3f8
 ```
 
-Approximate runtime: 3 minutes 17 seconds.
+Runtime: approximately 3 minutes 17 seconds.
 
 The video covers:
 
